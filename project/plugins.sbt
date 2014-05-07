@@ -5,4 +5,4 @@ resolvers ++= Seq(
   "Typesafe Other Repository" at "http://repo.typesafe.com/typesafe/repo/"
 )
 
-addSbtPlugin("play" % "sbt-plugin" % "2.1.0")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.2.0")
