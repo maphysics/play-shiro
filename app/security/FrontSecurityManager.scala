@@ -11,18 +11,18 @@ import org.apache.shiro.subject.SubjectContext
  */
 class FrontSecurityManager extends DefaultSecurityManager {
 
-  setSubjectFactory(new PlaySubjectFactory())
+  setSubjectFactory(new FrontSubjectFactory())
 
   // Not applicable as we're not using the java.servlet API
   //this.subjectDAO.asInstanceOf[DefaultSubjectDAO].setSessionStorageEvaluator(new DefaultWebSessionStorageEvaluator())
   //setRememberMeManager(new CookieRememberMeManager())
   //setSessionManager(new ServletContainerSessionManager())
 
-  override protected def createSubjectContext = new PlaySubjectContext()
+  override protected def createSubjectContext = new FrontSubjectContext()
 
   override protected def copy(subjectContext:SubjectContext) : SubjectContext = {
-    if (subjectContext.isInstanceOf[PlaySubjectContext]) {
-      return new PlaySubjectContext(subjectContext)
+    if (subjectContext.isInstanceOf[FrontSubjectContext]) {
+      return new FrontSubjectContext(subjectContext)
     }
     super.copy(subjectContext)
   }

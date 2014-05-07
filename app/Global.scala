@@ -25,8 +25,8 @@ object Global extends GlobalSettings {
 object ShiroConfig {
 
   def initialize() {
-    val sampleRealm = new PlayRealm()
-    val securityManager = new PlaySecurityManager()
+    val sampleRealm = new FrontRealm()
+    val securityManager = new FrontSecurityManager()
     securityManager.setRealm(sampleRealm)
 
     // Turn off session storage for better "stateless" management.
