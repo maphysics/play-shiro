@@ -15,7 +15,7 @@ import models.User
  * @author wsargent
  * @since 1/8/12
  */
-class FrontRealm extends AuthorizingRealm {
+class FrontDBRealm extends AuthorizingRealm {
 
   override protected def doGetAuthenticationInfo(token: AuthenticationToken): AuthenticationInfo = {
 

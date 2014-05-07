@@ -16,9 +16,9 @@ import security.Password
  * @since 1/8/12
  */
 
-case class User(email: String, password: String)
+case class UserDB(email: String, password: String)
 
-object User {
+object UserDB {
 
   /**
    * Parse a User from a ResultSet
